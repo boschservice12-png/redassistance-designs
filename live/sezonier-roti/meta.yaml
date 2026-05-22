@@ -1,0 +1,26 @@
+slug: sezonier-roti
+title: "Modul Sezonier Service Roți"
+title_short: "Sezonier Roți"
+status: live
+version: 1
+created: 2026-05-22
+updated: 2026-05-22
+language: ro
+brand:
+  primary_color: "#E11D2E"
+  font_sans: "Geist"
+  font_mono: "Geist Mono"
+seo:
+  title: "Modul Sezonier Roți — RedAssistance"
+  description: "Modul de gestiune sezonieră a anvelopelor pentru service-uri auto. Stocare, urmărire, programare — într-un singur flux."
+  og_type: website
+deployment:
+  type: github-pages
+  branch: main
+  path: /live/sezonier-roti/
+  url: "https://boschservice12-png.github.io/redassistance-designs/live/sezonier-roti/"
+self_contained: true
+external_deps:
+  - "https://fonts.googleapis.com/css2?family=Geist&family=Geist+Mono"
+owner: "Ferenc Szkaliczki"
+company: "SC Szkaliczki Service SRL"

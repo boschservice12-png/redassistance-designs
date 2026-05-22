@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modul Sezonier Roți — RedAssistance</title>
+<meta name="description" content="Modul de gestiune sezonieră a anvelopelor pentru service-uri auto. Stocare, urmărire, programare — într-un singur flux, fără să atingi istoricul service-ului.">
+<meta name="theme-color" content="#E11D2E">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Modul Sezonier Roți — RedAssistance">
+<meta property="og:description" content="Stocare, urmărire, programare anvelope sezoniere — într-un singur flux. 14 zile până la go-live.">
+<meta property="og:url" content="https://boschservice12-png.github.io/redassistance-designs/live/sezonier-roti/">
+<meta property="og:locale" content="ro_RO">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ra-red:#E11D2E;--ra-red-dark:#B91626;--ra-red-soft:#FCE8EA;
+  --ra-ink:#0A0A0A;--ra-ink-muted:#4A4A4A;--ra-ink-light:#6B6B6B;
+  --ra-bg:#FFFFFF;--ra-bg-soft:#F7F7F7;
+  --ra-border:#E5E5E5;--ra-border-strong:#CCCCCC;
+  --ra-font-sans:'Geist',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  --ra-font-mono:'Geist Mono',ui-monospace,'SF Mono',Monaco,monospace;
+  --ra-radius-sm:6px;--ra-radius-md:10px;--ra-radius-lg:16px;--ra-radius-xl:24px;
+  --ra-shadow-sm:0 1px 2px rgba(0,0,0,.05);--ra-shadow-md:0 4px 12px rgba(0,0,0,.08);
+  --ra-max-width:1180px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:var(--ra-font-sans);color:var(--ra-ink);background:var(--ra-bg);line-height:1.55;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+a{color:inherit;text-decoration:none}
+img,svg{display:block;max-width:100%}
+.container{max-width:var(--ra-max-width);margin:0 auto;padding:0 32px}
+.ra-header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:saturate(180%) blur(12px);-webkit-backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--ra-border)}
+.ra-header-inner{display:flex;align-items:center;justify-content:space-between;height:64px}
+.ra-logo{display:flex;align-items:center;gap:10px;font-weight:600;font-size:16px;letter-spacing:-.01em}
+.ra-logo-mark{width:28px;height:28px}
+.ra-nav{display:flex;gap:32px;font-size:14px;color:var(--ra-ink-muted)}
+.ra-nav a:hover{color:var(--ra-ink)}
+.ra-hero{padding:96px 0 80px;background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(225,29,46,.06),transparent 60%),var(--ra-bg)}
+.ra-eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:var(--ra-font-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ra-red);padding:6px 12px;border:1px solid rgba(225,29,46,.25);border-radius:999px;background:var(--ra-red-soft);margin-bottom:24px}
+.ra-eyebrow::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--ra-red)}
+.ra-h1{font-size:clamp(40px,6vw,68px);font-weight:600;letter-spacing:-.025em;line-height:1.05;max-width:14ch;margin:0 0 24px}
+.ra-h1 .accent{color:var(--ra-red)}
+.ra-lead{font-size:19px;color:var(--ra-ink-muted);max-width:60ch;margin:0 0 40px}
+.ra-cta-row{display:flex;gap:12px;flex-wrap:wrap}
+.ra-btn{display:inline-flex;align-items:center;gap:8px;padding:14px 24px;font-family:var(--ra-font-sans);font-size:15px;font-weight:500;border-radius:var(--ra-radius-md);border:1px solid transparent;cursor:pointer;transition:transform .12s,box-shadow .12s,background .12s}
+.ra-btn-primary{background:var(--ra-red);color:#fff;box-shadow:var(--ra-shadow-sm)}
+.ra-btn-primary:hover{background:var(--ra-red-dark);transform:translateY(-1px);box-shadow:var(--ra-shadow-md)}
+.ra-btn-secondary{background:transparent;color:var(--ra-ink);border-color:var(--ra-border-strong)}
+.ra-btn-secondary:hover{border-color:var(--ra-ink);background:var(--ra-bg-soft)}
+.ra-btn-arrow{font-family:var(--ra-font-mono);font-size:13px}
+.ra-section{padding:96px 0;border-top:1px solid var(--ra-border)}
+.ra-section-soft{background:var(--ra-bg-soft)}
+.ra-section-head{max-width:720px;margin:0 0 56px}
+.ra-kicker{font-family:var(--ra-font-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ra-ink-muted);margin:0 0 16px}
+.ra-h2{font-size:clamp(28px,4vw,44px);font-weight:600;letter-spacing:-.02em;line-height:1.1;margin:0 0 16px}
+.ra-section-lead{font-size:17px;color:var(--ra-ink-muted);margin:0}
+.ra-problems{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--ra-border);border:1px solid var(--ra-border);border-radius:var(--ra-radius-lg);overflow:hidden}
+.ra-problem{background:var(--ra-bg);padding:32px}
+.ra-problem-q{font-family:var(--ra-font-mono);font-size:13px;color:var(--ra-red);margin:0 0 12px}
+.ra-problem-t{font-size:19px;font-weight:500;letter-spacing:-.01em;margin:0}
+.ra-features{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.ra-feature{background:var(--ra-bg);border:1px solid var(--ra-border);border-radius:var(--ra-radius-lg);padding:28px;transition:border-color .15s,transform .15s}
+.ra-feature:hover{border-color:var(--ra-red);transform:translateY(-2px)}
+.ra-feature-icon{width:40px;height:40px;border-radius:var(--ra-radius-sm);background:var(--ra-red-soft);color:var(--ra-red);display:flex;align-items:center;justify-content:center;margin-bottom:20px}
+.ra-feature h3{font-size:17px;font-weight:600;letter-spacing:-.01em;margin:0 0 8px}
+.ra-feature p{font-size:14px;color:var(--ra-ink-muted);margin:0}
+.ra-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.ra-step-num{font-family:var(--ra-font-mono);font-size:12px;color:var(--ra-red);margin:0 0 16px;letter-spacing:.06em}
+.ra-step h3{font-size:18px;font-weight:600;letter-spacing:-.01em;margin:0 0 8px}
+.ra-step p{font-size:14px;color:var(--ra-ink-muted);margin:0}
+.ra-callout{background:var(--ra-ink);color:#fff;border-radius:var(--ra-radius-xl);padding:56px;display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:center}
+.ra-callout .ra-kicker{color:rgba(255,255,255,.5)}
+.ra-callout .ra-h2{color:#fff}
+.ra-callout p{color:rgba(255,255,255,.75);font-size:16px;margin:16px 0 0}
+.ra-callout-visual{font-family:var(--ra-font-mono);font-size:13px;color:rgba(255,255,255,.65);background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:var(--ra-radius-md);padding:24px;line-height:1.9;margin:0;white-space:pre;overflow-x:auto}
+.ra-callout-visual .ok{color:#4ADE80}
+.ra-callout-visual .ref{color:var(--ra-red)}
+.ra-cta-final{text-align:center;padding:120px 0;border-top:1px solid var(--ra-border)}
+.ra-cta-final .ra-h2{max-width:18ch;margin-left:auto;margin-right:auto}
+.ra-cta-final p{font-size:18px;color:var(--ra-ink-muted);max-width:50ch;margin:16px auto 40px}
+.ra-footer{border-top:1px solid var(--ra-border);padding:40px 0;font-size:13px;color:var(--ra-ink-light)}
+.ra-footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+.ra-footer-meta{font-family:var(--ra-font-mono);font-size:12px}
+@media(max-width:920px){
+  .container{padding:0 24px}
+  .ra-hero{padding:64px 0 56px}
+  .ra-section{padding:72px 0}
+  .ra-features{grid-template-columns:repeat(2,1fr)}
+  .ra-steps{grid-template-columns:repeat(2,1fr)}
+  .ra-callout{grid-template-columns:1fr;padding:40px}
+  .ra-nav{display:none}
+}
+@media(max-width:560px){
+  .container{padding:0 20px}
+  .ra-hero{padding:48px 0 40px}
+  .ra-section{padding:56px 0}
+  .ra-h1{font-size:36px}
+  .ra-lead{font-size:16px}
+  .ra-problems{grid-template-columns:1fr}
+  .ra-features{grid-template-columns:1fr}
+  .ra-steps{grid-template-columns:1fr}
+  .ra-callout{padding:32px 24px}
+  .ra-cta-final{padding:80px 0}
+  .ra-cta-row{flex-direction:column}
+  .ra-btn{width:100%;justify-content:center}
+}
+</style>
+</head>
+<body>
+
+<header class="ra-header">
+  <div class="container ra-header-inner">
+    <a href="#" class="ra-logo">
+      <svg class="ra-logo-mark" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect width="28" height="28" rx="6" fill="#E11D2E"/>
+        <path d="M9 8h6.5c2.5 0 4 1.5 4 3.7 0 1.7-1 2.9-2.5 3.4l3 4.9H17l-2.6-4.5h-2.6V20H9V8zm3.8 5.2h2.4c1 0 1.6-.5 1.6-1.4 0-.9-.6-1.4-1.6-1.4h-2.4v2.8z" fill="white"/>
+      </svg>
+      <span>RedAssistance</span>
+    </a>
+    <nav class="ra-nav">
+      <a href="#caracteristici">Caracteristici</a>
+      <a href="#flux">Cum funcționează</a>
+      <a href="#implementare">Implementare</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="ra-hero">
+    <div class="container">
+      <span class="ra-eyebrow">Modul · RedAssistance</span>
+      <h1 class="ra-h1">Planifică sezonul. <span class="accent">Nu atinge istoricul.</span></h1>
+      <p class="ra-lead">Modul dedicat de gestiune sezonieră a anvelopelor pentru service-uri auto. Stocare, urmărire, programare — într-un singur flux, integrat în Recepția RedAssistance, fără să modifici nimic din istoricul service-ului.</p>
+      <div class="ra-cta-row">
+        <a href="#implementare" class="ra-btn ra-btn-primary">Programează implementarea <span class="ra-btn-arrow">→</span></a>
+        <a href="#flux" class="ra-btn ra-btn-secondary">Vezi fluxul în 4 pași</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="ra-section">
+    <div class="container">
+      <div class="ra-section-head">
+        <p class="ra-kicker">Ce dispare fără modul</p>
+        <h2 class="ra-h2">Patru momente care costă bani și clienți.</h2>
+        <p class="ra-section-lead">Lucruri pe care fiecare service le trăiește în octombrie și aprilie — și care, fără un sistem, devin telefoane nervoase, anvelope rătăcite și clienți pierduți la concurență.</p>
+      </div>
+      <div class="ra-problems">
+        <div class="ra-problem"><p class="ra-problem-q">[01]</p><p class="ra-problem-t">Anvelopele clientului ajung în spate, fără etichetă, fără locație fizică.</p></div>
+        <div class="ra-problem"><p class="ra-problem-q">[02]</p><p class="ra-problem-t">Sezonul vine, clientul sună — nimeni nu mai știe pe ce raft sunt anvelopele lui.</p></div>
+        <div class="ra-problem"><p class="ra-problem-q">[03]</p><p class="ra-problem-t">La depozitare nu s-a măsurat profilul — nu se poate justifica starea la predare.</p></div>
+        <div class="ra-problem"><p class="ra-problem-q">[04]</p><p class="ra-problem-t">Clientul nu primește notificare la sezon — și își pune anvelopele la altcineva.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ra-section ra-section-soft" id="caracteristici">
+    <div class="container">
+      <div class="ra-section-head">
+        <p class="ra-kicker">Caracteristici</p>
+        <h2 class="ra-h2">Șase capabilități. Zero foi de hârtie.</h2>
+      </div>
+      <div class="ra-features">
+        <div class="ra-feature">
+          <div class="ra-feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><path d="M14 14h4v4M18 18h.01M14 18h.01M18 14h.01"/></svg></div>
+          <h3>Cod unic per set</h3>
+          <p>Etichetă QR + cod alfanumeric, generat la recepție. Scanare în maxim 2 secunde.</p>
+        </div>
+        <div class="ra-feature">
+          <div class="ra-feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+          <h3>Foto obligatoriu</h3>
+          <p>4 fotografii pe anvelope + locația din depozit. Dovadă vizuală la primire și la predare.</p>
+        </div>
+        <div class="ra-feature">
+          <div class="ra-feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/><line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/><line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/><line x1="1" y1="14" x2="7" y2="14"/><line x1="9" y1="8" x2="15" y2="8"/><line x1="17" y1="16" x2="23" y2="16"/></svg></div>
+          <h3>Stare măsurată</h3>
+          <p>Profil în mm, dată DOT, observații. Câmpuri obligatorii — nu se sare peste ele.</p>
+        </div>
+        <div class="ra-feature">
+          <div class="ra-feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <h3>Locație fizică</h3>
+          <p>Depozit · raft · poziție. Caut la sezon — găsesc în 30 de secunde.</p>
+        </div>
+        <div class="ra-feature">
+          <div class="ra-feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></div>
+          <h3>Notificare sezon</h3>
+          <p>SMS + WhatsApp automat, 21 de zile înainte de sezon. Programare cu un click.</p>
+        </div>
+        <div class="ra-feature">
+          <div class="ra-feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h18v4H3zM3 10h18v4H3zM3 17h18v4H3z"/></svg></div>
+          <h3>Istoric per VIN</h3>
+          <p>Toate seturile, toate sezoanele, toți anii — atașate la VIN și la fișa clientului.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ra-section" id="flux">
+    <div class="container">
+      <div class="ra-section-head">
+        <p class="ra-kicker">Flux operațional</p>
+        <h2 class="ra-h2">Patru pași. Aceeași logică, la primire și la predare.</h2>
+      </div>
+      <div class="ra-steps">
+        <div class="ra-step"><p class="ra-step-num">PAS 01 · RECEPȚIE</p><h3>Scan + foto + cod</h3><p>Scan talon, 4 foto pe anvelope, generare etichetă cu cod unic. Total: 90 de secunde.</p></div>
+        <div class="ra-step"><p class="ra-step-num">PAS 02 · STOCARE</p><h3>Poziție depozit</h3><p>Recepționera marchează raftul și poziția. Tichet de predare se generează automat în PDF.</p></div>
+        <div class="ra-step"><p class="ra-step-num">PAS 03 · SEZON</p><h3>Notificare automată</h3><p>21 de zile înainte: SMS + WhatsApp. Clientul răspunde cu o slot orară din calendar.</p></div>
+        <div class="ra-step"><p class="ra-step-num">PAS 04 · PREDARE</p><h3>Scan + foto la ieșire</h3><p>Confirmare ieșire prin scan cod. Foto de predare. Factură legată automat de tichet.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ra-section ra-section-soft">
+    <div class="container">
+      <div class="ra-callout">
+        <div>
+          <p class="ra-kicker">Integrare în ecosistemul RedAssistance</p>
+          <h2 class="ra-h2">Aceeași identificare a vehiculului. Același client.</h2>
+          <p>Modulul Sezonier folosește exact aceleași date despre vehicul și client ca restul fluxului RPW: VIN, talon OCR, fișă client. Niciun re-import, nicio dublură. Datele apar automat în Recepție și în Închidere, fără a modifica nimic din istoricul existent.</p>
+        </div>
+        <pre class="ra-callout-visual">RPW · Recepție
+  └─ VIN: ZCFC...
+     ├─ Talon OCR        <span class="ok">✓ identic</span>
+     ├─ Fișă client      <span class="ok">✓ identic</span>
+     └─ <span class="ref">Modul Sezonier</span>
+        ├─ Set vară 2025  <span class="ok">✓ stocat</span>
+        └─ Set iarnă 2024 <span class="ok">✓ predat</span></pre>
+      </div>
+    </div>
+  </section>
+
+  <section class="ra-cta-final" id="implementare">
+    <div class="container">
+      <p class="ra-kicker">Implementare</p>
+      <h2 class="ra-h2">Trei ore pe sezon, pierdute pe căutări. Le închidem în 14 zile.</h2>
+      <p>Configurare modul, etichetare depozit existent, instruire echipă recepție și go-live — fără să oprești activitatea service-ului.</p>
+      <div class="ra-cta-row" style="justify-content:center;">
+        <a href="mailto:ferenc@redassistance.net?subject=Implementare%20Modul%20Sezonier%20Roti" class="ra-btn ra-btn-primary">Programează implementarea <span class="ra-btn-arrow">→</span></a>
+        <a href="#" class="ra-btn ra-btn-secondary">Solicită demo de 15 min</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="ra-footer">
+  <div class="container ra-footer-inner">
+    <div>© 2026 RedAssistance · SC Szkaliczki Service SRL</div>
+    <div class="ra-footer-meta">design · live · sezonier-roti · v1</div>
+  </div>
+</footer>
+
+</body>
+</html>

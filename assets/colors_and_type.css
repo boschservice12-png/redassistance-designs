@@ -1,0 +1,50 @@
+/* ============================================================
+   RedAssistance — Brand Tokens v1
+   Forrás: assets/colors_and_type.css
+   Felhasználás: inline copy minden live/<slug>/index.html-ben.
+   NE hivatkozz rá relatív útvonalon — a self-contained szabály
+   miatt mindig a <style> blokk legtetejére kell másolni.
+   ============================================================ */
+
+:root {
+  /* === Brand — Piros === */
+  --ra-red:        #E11D2E;
+  --ra-red-dark:   #B91626;
+  --ra-red-soft:   #FCE8EA;
+
+  /* === Tinta / szöveg === */
+  --ra-ink:        #0A0A0A;
+  --ra-ink-muted:  #4A4A4A;
+  --ra-ink-light:  #6B6B6B;
+
+  /* === Háttér === */
+  --ra-bg:         #FFFFFF;
+  --ra-bg-soft:    #F7F7F7;
+  --ra-bg-section: #FAFAFA;
+
+  /* === Keret === */
+  --ra-border:        #E5E5E5;
+  --ra-border-strong: #CCCCCC;
+
+  /* === Tipográfia === */
+  --ra-font-sans: 'Geist', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --ra-font-mono: 'Geist Mono', ui-monospace, 'SF Mono', Monaco, monospace;
+
+  /* === Rádiusz === */
+  --ra-radius-sm: 6px;
+  --ra-radius-md: 10px;
+  --ra-radius-lg: 16px;
+  --ra-radius-xl: 24px;
+
+  /* === Árnyékok === */
+  --ra-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --ra-shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --ra-shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.10);
+
+  /* === Layout === */
+  --ra-max-width: 1180px;
+}
+
+/* Google Fonts import — opcionálisan @import-tal,
+   vagy inkább <link>-kel a <head>-be. */
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap');
