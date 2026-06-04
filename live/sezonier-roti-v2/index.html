@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Serviciu Sezonier Roți — RedAssistance</title>
+<meta name="description" content="Depozitare profesională a anvelopelor între sezoane: predare, stocare în condiții optime și montare sezonală. 30 EUR/lună sau 360 EUR/an.">
+<meta name="theme-color" content="#E11D2E">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Serviciu Sezonier Roți — RedAssistance">
+<meta property="og:description" content="Anvelopele tale, în siguranță tot anul. Predare, depozitare și montare sezonală — un singur abonament. 30 EUR/lună · 360 EUR/an.">
+<meta property="og:url" content="https://boschservice12-png.github.io/redassistance-designs/live/sezonier-roti-v2/">
+<meta property="og:locale" content="ro_RO">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{
+  --ra-red:#E11D2E;--ra-red-dark:#B91626;--ra-red-soft:#FCE8EA;
+  --ra-ink:#0A0A0A;--ra-ink-muted:#4A4A4A;--ra-ink-light:#6B6B6B;
+  --ra-bg:#FFFFFF;--ra-bg-soft:#F7F7F7;
+  --ra-border:#E5E5E5;--ra-border-strong:#CCCCCC;
+  --ra-green:#15803D;--ra-green-soft:#E7F6EC;
+  --ra-font-sans:'Geist',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  --ra-font-mono:'Geist Mono',ui-monospace,'SF Mono',Menlo,Monaco,Consolas,monospace;
+  --ra-radius-sm:6px;--ra-radius-md:10px;--ra-radius-lg:16px;--ra-radius-xl:24px;
+  --ra-shadow-sm:0 1px 2px rgba(0,0,0,.05);--ra-shadow-md:0 4px 12px rgba(0,0,0,.08);
+  --ra-shadow-lg:0 20px 48px rgba(225,29,46,.18);
+  --ra-max-width:1180px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:var(--ra-font-sans);color:var(--ra-ink);background:var(--ra-bg);line-height:1.55;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+a{color:inherit;text-decoration:none}
+img,svg{display:block;max-width:100%}
+.container{max-width:var(--ra-max-width);margin:0 auto;padding:0 32px}
+
+/* HEADER */
+.ra-header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:saturate(180%) blur(12px);-webkit-backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--ra-border)}
+.ra-header-inner{display:flex;align-items:center;justify-content:space-between;height:64px}
+.ra-logo{display:flex;align-items:center;gap:10px;font-weight:600;font-size:16px;letter-spacing:-.01em}
+.ra-logo-mark{width:28px;height:28px}
+.ra-nav{display:flex;gap:32px;font-size:14px;color:var(--ra-ink-muted);align-items:center}
+.ra-nav a:hover{color:var(--ra-ink)}
+.ra-nav-cta{padding:8px 16px;border:1px solid var(--ra-red);color:var(--ra-red);border-radius:999px;font-weight:500}
+.ra-nav-cta:hover{background:var(--ra-red);color:#fff}
+
+/* HERO */
+.ra-hero{padding:88px 0 64px;background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(225,29,46,.06),transparent 60%),var(--ra-bg)}
+.ra-eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:var(--ra-font-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ra-red);padding:6px 12px;border:1px solid rgba(225,29,46,.25);border-radius:999px;background:var(--ra-red-soft);margin-bottom:24px}
+.ra-eyebrow::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--ra-red)}
+.ra-h1{font-size:clamp(38px,6vw,64px);font-weight:600;letter-spacing:-.025em;line-height:1.05;max-width:16ch;margin:0 0 22px}
+.ra-h1 .accent{color:var(--ra-red)}
+.ra-lead{font-size:19px;color:var(--ra-ink-muted);max-width:62ch;margin:0 0 40px}
+.ra-cta-row{display:flex;gap:12px;flex-wrap:wrap}
+.ra-btn{display:inline-flex;align-items:center;gap:8px;padding:14px 24px;font-family:var(--ra-font-sans);font-size:15px;font-weight:500;border-radius:var(--ra-radius-md);border:1px solid transparent;cursor:pointer;transition:transform .12s,box-shadow .12s,background .12s}
+.ra-btn-primary{background:var(--ra-red);color:#fff;box-shadow:var(--ra-shadow-sm)}
+.ra-btn-primary:hover{background:var(--ra-red-dark);transform:translateY(-1px);box-shadow:var(--ra-shadow-md)}
+.ra-btn-secondary{background:transparent;color:var(--ra-ink);border-color:var(--ra-border-strong)}
+.ra-btn-secondary:hover{border-color:var(--ra-ink);background:var(--ra-bg-soft)}
+.ra-btn-arrow{font-family:var(--ra-font-mono);font-size:13px}
+
+/* HERO TIMELINE */
+.ra-timeline{margin-top:64px;border:1px solid var(--ra-border);border-radius:var(--ra-radius-xl);background:var(--ra-bg);box-shadow:var(--ra-shadow-md);padding:40px 32px 36px;position:relative;overflow:hidden}
+.ra-timeline-label{font-family:var(--ra-font-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ra-ink-light);margin:0 0 32px}
+.ra-timeline-track{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;position:relative}
+.ra-timeline-track::before{content:"";position:absolute;top:18px;left:12.5%;right:12.5%;height:2px;background:linear-gradient(90deg,var(--ra-red-soft),var(--ra-red),var(--ra-red-soft))}
+.ra-tl-node{position:relative;text-align:center;padding:0 8px}
+.ra-tl-dot{width:38px;height:38px;border-radius:50%;background:var(--ra-red);color:#fff;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;position:relative;z-index:2;box-shadow:0 0 0 6px var(--ra-bg)}
+.ra-tl-dot svg{width:18px;height:18px}
+.ra-tl-step{font-family:var(--ra-font-mono);font-size:11px;letter-spacing:.06em;color:var(--ra-red);margin:0 0 6px}
+.ra-tl-title{font-size:16px;font-weight:600;letter-spacing:-.01em;margin:0 0 6px}
+.ra-tl-desc{font-size:13px;color:var(--ra-ink-muted);margin:0;line-height:1.5}
+
+/* SECTIONS */
+.ra-section{padding:88px 0;border-top:1px solid var(--ra-border)}
+.ra-section-soft{background:var(--ra-bg-soft)}
+.ra-section-head{max-width:720px;margin:0 0 48px}
+.ra-kicker{font-family:var(--ra-font-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ra-ink-muted);margin:0 0 16px}
+.ra-h2{font-size:clamp(28px,4vw,42px);font-weight:600;letter-spacing:-.02em;line-height:1.1;margin:0 0 16px}
+.ra-h2 .accent{color:var(--ra-red)}
+.ra-section-lead{font-size:17px;color:var(--ra-ink-muted);margin:0}
+
+/* PRICE BLOCK */
+.ra-pricing{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:860px;margin:0 auto}
+.ra-price-card{position:relative;background:var(--ra-bg);border:1px solid var(--ra-border);border-radius:var(--ra-radius-xl);padding:40px 36px;transition:transform .15s,box-shadow .15s,border-color .15s}
+.ra-price-card:hover{transform:translateY(-3px);box-shadow:var(--ra-shadow-md)}
+.ra-price-card.featured{border:1.5px solid var(--ra-red);background:linear-gradient(180deg,var(--ra-red-soft) 0%,var(--ra-bg) 38%);box-shadow:var(--ra-shadow-lg)}
+.ra-price-badge{position:absolute;top:-13px;left:36px;background:var(--ra-red);color:#fff;font-family:var(--ra-font-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;padding:5px 14px;border-radius:999px}
+.ra-price-plan{font-family:var(--ra-font-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ra-ink-muted);margin:0 0 18px}
+.ra-price-amount{display:flex;align-items:baseline;gap:6px;margin:0 0 4px}
+.ra-price-num{font-size:56px;font-weight:600;letter-spacing:-.03em;line-height:1}
+.ra-price-cur{font-size:22px;font-weight:600;color:var(--ra-ink)}
+.ra-price-per{font-size:15px;color:var(--ra-ink-light)}
+.ra-price-note{font-size:14px;color:var(--ra-ink-muted);margin:14px 0 24px;min-height:42px}
+.ra-price-list{list-style:none;padding:0;margin:0 0 8px}
+.ra-price-list li{display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--ra-ink-muted);padding:7px 0}
+.ra-price-list li svg{flex-shrink:0;width:16px;height:16px;color:var(--ra-red);margin-top:3px}
+.ra-price-foot{font-family:var(--ra-font-mono);font-size:12px;color:var(--ra-ink-light);text-align:center;margin:32px 0 0}
+
+/* DO / DON'T COLUMNS */
+.ra-doublecol{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--ra-border);border:1px solid var(--ra-border);border-radius:var(--ra-radius-lg);overflow:hidden}
+.ra-col{background:var(--ra-bg);padding:36px 32px}
+.ra-col-head{display:flex;align-items:center;gap:12px;margin:0 0 24px}
+.ra-col-badge{width:34px;height:34px;border-radius:var(--ra-radius-sm);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ra-col-badge.yes{background:var(--ra-green-soft);color:var(--ra-green)}
+.ra-col-badge.no{background:var(--ra-red-soft);color:var(--ra-red)}
+.ra-col-badge svg{width:18px;height:18px}
+.ra-col h3{font-size:19px;font-weight:600;letter-spacing:-.01em;margin:0}
+.ra-checklist{list-style:none;padding:0;margin:0}
+.ra-checklist li{display:flex;align-items:flex-start;gap:12px;font-size:15px;color:var(--ra-ink-muted);padding:11px 0;border-top:1px solid var(--ra-border)}
+.ra-checklist li:first-child{border-top:none}
+.ra-checklist li svg{flex-shrink:0;width:18px;height:18px;margin-top:2px}
+.ra-checklist.yes li svg{color:var(--ra-green)}
+.ra-checklist.no li svg{color:var(--ra-red)}
+.ra-checklist li strong{color:var(--ra-ink);font-weight:600}
+
+/* CONDIȚII */
+.ra-conditions{display:grid;grid-template-columns:repeat(2,1fr);gap:14px 40px;counter-reset:cond}
+.ra-cond{display:flex;gap:16px;padding:18px 0;border-top:1px solid var(--ra-border)}
+.ra-cond::before{counter-increment:cond;content:counter(cond,decimal-leading-zero);font-family:var(--ra-font-mono);font-size:13px;color:var(--ra-red);flex-shrink:0;padding-top:2px}
+.ra-cond-body h4{font-size:15px;font-weight:600;letter-spacing:-.01em;margin:0 0 4px}
+.ra-cond-body p{font-size:14px;color:var(--ra-ink-muted);margin:0;line-height:1.5}
+
+/* CTA FINAL */
+.ra-cta-final{text-align:center;padding:104px 0;border-top:1px solid var(--ra-border)}
+.ra-cta-final .ra-h2{max-width:20ch;margin-left:auto;margin-right:auto}
+.ra-cta-final p{font-size:18px;color:var(--ra-ink-muted);max-width:52ch;margin:16px auto 36px}
+.ra-contact-line{font-family:var(--ra-font-mono);font-size:13px;color:var(--ra-ink-light);margin-top:28px}
+.ra-contact-line span{color:var(--ra-red)}
+
+/* FOOTER */
+.ra-footer{border-top:1px solid var(--ra-border);padding:40px 0;font-size:13px;color:var(--ra-ink-light)}
+.ra-footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+.ra-footer-meta{font-family:var(--ra-font-mono);font-size:12px}
+
+/* ENTRANCE ANIMATION */
+@keyframes ra-rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+.ra-anim{opacity:0;animation:ra-rise .7s cubic-bezier(.2,.7,.2,1) forwards}
+.ra-d1{animation-delay:.05s}.ra-d2{animation-delay:.15s}.ra-d3{animation-delay:.25s}.ra-d4{animation-delay:.35s}.ra-d5{animation-delay:.45s}
+@media(prefers-reduced-motion:reduce){.ra-anim{animation:none;opacity:1}}
+
+/* RESPONSIVE */
+@media(max-width:920px){
+  .container{padding:0 24px}
+  .ra-hero{padding:56px 0 48px}
+  .ra-section{padding:64px 0}
+  .ra-nav{display:none}
+  .ra-timeline-track{grid-template-columns:repeat(2,1fr);gap:32px 8px}
+  .ra-timeline-track::before{display:none}
+  .ra-conditions{grid-template-columns:1fr;gap:0}
+}
+@media(max-width:560px){
+  .container{padding:0 20px}
+  .ra-hero{padding:44px 0 36px}
+  .ra-section{padding:52px 0}
+  .ra-h1{font-size:34px}
+  .ra-lead{font-size:16px}
+  .ra-timeline{padding:32px 20px 28px}
+  .ra-timeline-track{grid-template-columns:1fr;gap:8px}
+  .ra-tl-node{display:flex;text-align:left;gap:16px;padding:14px 0;border-top:1px solid var(--ra-border)}
+  .ra-tl-node:first-child{border-top:none}
+  .ra-tl-dot{margin:0;flex-shrink:0}
+  .ra-pricing{grid-template-columns:1fr}
+  .ra-doublecol{grid-template-columns:1fr}
+  .ra-cta-row{flex-direction:column}
+  .ra-btn{width:100%;justify-content:center}
+  .ra-cta-final{padding:72px 0}
+}
+
+/* PRINT — A4 */
+@page{size:A4;margin:14mm}
+@media print{
+  *{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
+  html,body{background:#fff}
+  .ra-header{position:static;border-bottom:1px solid #ccc;backdrop-filter:none;-webkit-backdrop-filter:none}
+  .ra-nav,.ra-cta-row,.ra-btn{display:none!important}
+  .ra-anim{animation:none!important;opacity:1!important;transform:none!important}
+  .container{max-width:100%;padding:0}
+  .ra-hero{padding:18px 0 12px;background:#fff}
+  .ra-section{padding:22px 0;border-top:1px solid #ddd;break-inside:avoid}
+  .ra-section-soft{background:#fff}
+  .ra-h1{font-size:30px;max-width:none}
+  .ra-lead{font-size:14px;margin-bottom:18px}
+  .ra-timeline{margin-top:18px;box-shadow:none;border:1px solid #ccc;break-inside:avoid;padding:22px}
+  .ra-pricing,.ra-doublecol,.ra-conditions{break-inside:avoid}
+  .ra-price-card{box-shadow:none!important;transform:none!important;break-inside:avoid}
+  .ra-price-card.featured{border:1.5px solid var(--ra-red)}
+  .ra-cta-final{padding:30px 0;break-inside:avoid}
+  .ra-price-num{font-size:44px}
+  a[href^="mailto:"]::after,a[href^="tel:"]::after{content:""}
+}
+</style>
+</head>
+<body>
+
+<header class="ra-header">
+  <div class="container ra-header-inner">
+    <a href="#" class="ra-logo">
+      <svg class="ra-logo-mark" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect width="28" height="28" rx="6" fill="#E11D2E"/>
+        <path d="M9 8h6.5c2.5 0 4 1.5 4 3.7 0 1.7-1 2.9-2.5 3.4l3 4.9H17l-2.6-4.5h-2.6V20H9V8zm3.8 5.2h2.4c1 0 1.6-.5 1.6-1.4 0-.9-.6-1.4-1.6-1.4h-2.4v2.8z" fill="white"/>
+      </svg>
+      <span>RedAssistance</span>
+    </a>
+    <nav class="ra-nav">
+      <a href="#flux">Cum funcționează</a>
+      <a href="#pret">Preț</a>
+      <a href="#conditii">Condiții</a>
+      <a href="#contact" class="ra-nav-cta">Programează predarea</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- HERO + TIMELINE -->
+  <section class="ra-hero">
+    <div class="container">
+      <span class="ra-eyebrow ra-anim ra-d1">Serviciu · Sezonier Roți</span>
+      <h1 class="ra-h1 ra-anim ra-d2">Anvelopele tale, <span class="accent">în siguranță tot anul.</span></h1>
+      <p class="ra-lead ra-anim ra-d3">Predai jocul de anvelope la sfârșit de sezon, noi îl depozităm în condiții optime și ți-l montăm la momentul potrivit. Tu nu mai cari, nu mai cauți loc în garaj și nu mai uiți de schimbarea sezonieră — totul într-un singur abonament.</p>
+      <div class="ra-cta-row ra-anim ra-d4">
+        <a href="#contact" class="ra-btn ra-btn-primary">Programează predarea <span class="ra-btn-arrow">→</span></a>
+        <a href="#pret" class="ra-btn ra-btn-secondary">Vezi prețul</a>
+      </div>
+
+      <div class="ra-timeline ra-anim ra-d5">
+        <p class="ra-timeline-label">Cum decurge un sezon complet</p>
+        <div class="ra-timeline-track">
+          <div class="ra-tl-node">
+            <div class="ra-tl-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+            <p class="ra-tl-step">PAS 01</p>
+            <div>
+              <p class="ra-tl-title">Programare</p>
+              <p class="ra-tl-desc">Îți alegi data și ora online sau telefonic. Primești confirmare pe SMS.</p>
+            </div>
+          </div>
+          <div class="ra-tl-node">
+            <div class="ra-tl-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="7.5 4.21 12 6.81 16.5 4.21"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div>
+            <p class="ra-tl-step">PAS 02</p>
+            <div>
+              <p class="ra-tl-title">Predare</p>
+              <p class="ra-tl-desc">Aducem anvelopele, le fotografiem și măsurăm. Primești tichet de predare cu cod unic.</p>
+            </div>
+          </div>
+          <div class="ra-tl-node">
+            <div class="ra-tl-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+            <p class="ra-tl-step">PAS 03</p>
+            <div>
+              <p class="ra-tl-title">Depozitare</p>
+              <p class="ra-tl-desc">Stocare în spațiu uscat și ventilat, pe poziție etichetată, ferit de soare și umezeală.</p>
+            </div>
+          </div>
+          <div class="ra-tl-node">
+            <div class="ra-tl-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><line x1="12" y1="3" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="21"/><line x1="3" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="21" y2="12"/></svg></div>
+            <p class="ra-tl-step">PAS 04</p>
+            <div>
+              <p class="ra-tl-title">Montare sezonală</p>
+              <p class="ra-tl-desc">Te anunțăm înainte de sezon, programezi montarea — și pleci cu setul potrivit pe mașină.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICE BLOCK -->
+  <section class="ra-section ra-section-soft" id="pret">
+    <div class="container">
+      <div class="ra-section-head">
+        <p class="ra-kicker">Tarif</p>
+        <h2 class="ra-h2">Un singur abonament. <span class="accent">Fără costuri ascunse.</span></h2>
+        <p class="ra-section-lead">Alegi formula care ți se potrivește. Ambele includ predarea, depozitarea pe tot sezonul și montarea sezonieră — totul la același nivel de serviciu.</p>
+      </div>
+      <div class="ra-pricing">
+        <div class="ra-price-card">
+          <p class="ra-price-plan">Abonament lunar</p>
+          <div class="ra-price-amount">
+            <span class="ra-price-num">30</span>
+            <span class="ra-price-cur">EUR</span>
+            <span class="ra-price-per">/ lună</span>
+          </div>
+          <p class="ra-price-note">Flexibil, fără angajament pe termen lung. Ideal dacă vrei să începi imediat.</p>
+          <ul class="ra-price-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Depozitare în condiții profesionale</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Predare și ridicare incluse</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Notificare automată la sezon</li>
+          </ul>
+        </div>
+        <div class="ra-price-card featured">
+          <span class="ra-price-badge">Cea mai aleasă</span>
+          <p class="ra-price-plan">Abonament anual</p>
+          <div class="ra-price-amount">
+            <span class="ra-price-num">360</span>
+            <span class="ra-price-cur">EUR</span>
+            <span class="ra-price-per">/ an</span>
+          </div>
+          <p class="ra-price-note">O singură plată pentru tot anul. Nu te mai gândești la nimic — te ocupăm noi de ambele sezoane.</p>
+          <ul class="ra-price-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Tot ce e inclus în planul lunar</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Acoperire pe ambele schimbări sezoniere</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Prioritate la programare în vârf de sezon</li>
+          </ul>
+        </div>
+      </div>
+      <p class="ra-price-foot">Prețurile sunt exprimate în EUR, TVA inclus · Plata în RON la cursul BNR din ziua facturării</p>
+    </div>
+  </section>
+
+  <!-- DO / DON'T -->
+  <section class="ra-section" id="flux">
+    <div class="container">
+      <div class="ra-section-head">
+        <p class="ra-kicker">Ce primești exact</p>
+        <h2 class="ra-h2">Ce face serviciul — și ce nu face.</h2>
+        <p class="ra-section-lead">Transparență totală, ca să știi de la început unde se oprește responsabilitatea noastră și unde rămâne a ta.</p>
+      </div>
+      <div class="ra-doublecol">
+        <div class="ra-col">
+          <div class="ra-col-head">
+            <span class="ra-col-badge yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+            <h3>Ce face serviciul</h3>
+          </div>
+          <ul class="ra-checklist yes">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span><strong>Depozitare profesională</strong> în spațiu uscat, ventilat și securizat, pe poziție etichetată.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span><strong>Evidență foto și măsurători</strong> la predare: profil în mm, dată DOT, stare vizuală documentată.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span><strong>Notificare înainte de sezon</strong> prin SMS, cu programare rapidă pentru montare.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span><strong>Montarea sezonieră</strong> a setului depozitat, la data programată de tine.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span><strong>Istoric complet</strong> al setului tău, legat de numărul de înmatriculare și seria de șasiu.</span></li>
+          </ul>
+        </div>
+        <div class="ra-col">
+          <div class="ra-col-head">
+            <span class="ra-col-badge no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span>
+            <h3>Ce NU face serviciul</h3>
+          </div>
+          <ul class="ra-checklist no">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg><span><strong>Nu reparăm și nu vulcanizăm</strong> anvelopele în cadrul abonamentului — acestea se tarifează separat.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg><span><strong>Nu garantăm uzura naturală</strong>: profilul consumat sau îmbătrânirea cauciucului nu intră în răspunderea noastră.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg><span><strong>Nu acoperim jante neînsoțite de dovada proprietății</strong> sau seturi nedeclarate la predare.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg><span><strong>Nu transferăm setul către terți</strong> fără acordul scris al titularului abonamentului.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg><span><strong>Nu păstrăm setul nelimitat</strong> după expirarea abonamentului — vezi condițiile de ridicare.</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONDIȚII -->
+  <section class="ra-section ra-section-soft" id="conditii">
+    <div class="container">
+      <div class="ra-section-head">
+        <p class="ra-kicker">Condiții contractuale</p>
+        <h2 class="ra-h2">Termenii serviciului, pe scurt.</h2>
+        <p class="ra-section-lead">Aceste condiții fac parte din contractul de prestări servicii și sunt acceptate la momentul predării primului set.</p>
+      </div>
+      <div class="ra-conditions">
+        <div class="ra-cond"><div class="ra-cond-body"><h4>Durata și reînnoirea</h4><p>Abonamentul se încheie pe perioada aleasă (lunar sau anual) și se reînnoiește doar cu acordul clientului.</p></div></div>
+        <div class="ra-cond"><div class="ra-cond-body"><h4>Predarea setului</h4><p>La predare se întocmesc fotografii și măsurători. Tichetul cu cod unic este dovada depozitării.</p></div></div>
+        <div class="ra-cond"><div class="ra-cond-body"><h4>Ridicarea anvelopelor</h4><p>Setul se ridică doar de titular sau de o persoană împuternicită în scris, pe baza tichetului de predare.</p></div></div>
+        <div class="ra-cond"><div class="ra-cond-body"><h4>Plata</h4><p>Plata se face anticipat, la începutul perioadei. Neplata suspendă serviciul și obligația de depozitare.</p></div></div>
+        <div class="ra-cond"><div class="ra-cond-body"><h4>Răspundere</h4><p>Răspundem pentru pierderi sau deteriorări din culpa noastră, în limita valorii declarate la predare.</p></div></div>
+        <div class="ra-cond"><div class="ra-cond-body"><h4>Expirare și nepreluare</h4><p>Seturile neridicate în 30 de zile de la expirare se tarifează suplimentar pentru depozitare prelungită.</p></div></div>
+        <div class="ra-cond"><div class="ra-cond-body"><h4>Date personale</h4><p>Prelucrăm datele strict pentru prestarea serviciului, conform GDPR. Nu le transmitem către terți.</p></div></div>
+        <div class="ra-cond"><div class="ra-cond-body"><h4>Încetare</h4><p>Clientul poate renunța oricând; abonamentul lunar nu se prelungește, iar setul se ridică la finalul perioadei plătite.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="ra-cta-final" id="contact">
+    <div class="container">
+      <p class="ra-kicker">Rezervă-ți locul</p>
+      <h2 class="ra-h2">Predă anvelopele acum — le ridici gata de drum la sezon.</h2>
+      <p>Programează predarea într-un minut. Îți confirmăm data, ora și locația de depozitare.</p>
+      <div class="ra-cta-row" style="justify-content:center;">
+        <a href="mailto:ferenc@redassistance.net?subject=Programare%20Serviciu%20Sezonier%20Roti" class="ra-btn ra-btn-primary">Programează predarea <span class="ra-btn-arrow">→</span></a>
+        <a href="tel:+40000000000" class="ra-btn ra-btn-secondary">Sună-ne</a>
+      </div>
+      <p class="ra-contact-line">ferenc@redassistance.net · <span>SC Szkaliczki Service SRL</span></p>
+    </div>
+  </section>
+</main>
+
+<footer class="ra-footer">
+  <div class="container ra-footer-inner">
+    <div>© 2026 RedAssistance · SC Szkaliczki Service SRL</div>
+    <div class="ra-footer-meta">design · live · sezonier-roti · v2</div>
+  </div>
+</footer>
+
+</body>
+</html>
